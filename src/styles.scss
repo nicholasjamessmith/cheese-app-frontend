@@ -1,25 +1,40 @@
-//Variables
-$maincolor: black;
-$contrastcolor: white;
+$maincolor: midnightblue;
+$contrastcolor: yellow;
 
-@mixin white-text-black-bg {
+@mixin yellow-text-midnightblue-bg {
   color: $contrastcolor;
   background-color: $maincolor;
 }
 
-//Header
+nav,
+.indexHead {
+  @include yellow-text-midnightblue-bg;
+}
 
-nav {
-  @include white-text-black-bg;
-  display: flex;
-  justify-content: flex-start;
+a {
+  @include yellow-text-midnightblue-bg;
+  margin: 10px;
+  font-size: large;
+}
 
-  a {
-    @include white-text-black-bg;
+body {
+  background-color: midnightblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-    div {
-      margin: 10px;
-      font-size: large
-    }
-  }
+img {
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.indexForm {
+  text-align: center;
+  @include yellow-text-midnightblue-bg()
+}
+
+.main {
+  text-align: center;
+  @include yellow-text-midnightblue-bg;
+  display:inline-flex;
+  flex: none;
 }

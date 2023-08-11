@@ -21,3 +21,11 @@ export const createAction = async ({ request }) => {
   })
   return redirect('/')
 }
+
+export const deleteAction = async ({ params }) => {
+  const id = params.id
+  await fetch(`${baseUrl}/cheese/${id}`, {
+    method: `DELETE`
+  })
+  return redirect('/')
+}
